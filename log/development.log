@@ -1649,3 +1649,75 @@ FOREIGN KEY ("portfolio_id")
   [1m[36mSecurity Create (0.5ms)[0m  [1m[32mINSERT INTO "securities" ("portfolio_id", "ticker", "price", "ftWH", "ftWL", "purchase_price", "position_size", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["portfolio_id", 3], ["ticker", "AAPL"], ["price", 100], ["ftWH", 120], ["ftWL", 90], ["purchase_price", 98], ["position_size", 2], ["created_at", "2020-06-09 21:58:12.029300"], ["updated_at", "2020-06-09 21:58:12.029300"]]
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "securities"[0m
+Started GET "/portfolios" for ::1 at 2020-06-09 18:39:07 -0400
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as */*
+  [1m[36mPortfolio Load (8.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 10.9ms | ActiveRecord: 37.9ms | Allocations: 6399)
+
+
+Started GET "/portfolios/3" for ::1 at 2020-06-09 18:39:14 -0400
+Processing by PortfoliosController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:44:in `set_portfolio'
+Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 72.1ms | Allocations: 1236)
+
+
+Started GET "/securities" for ::1 at 2020-06-09 18:41:43 -0400
+Processing by SecuritiesController#index as */*
+  [1m[36mSecurity Load (44.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 138ms (Views: 23.7ms | ActiveRecord: 112.6ms | Allocations: 8322)
+
+
+Started GET "/securities/3" for ::1 at 2020-06-09 18:41:47 -0400
+Processing by SecuritiesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mSecurity Load (2.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:44:in `set_security'
+Completed 200 OK in 35ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 942)
+
+
+Started GET "/497a08878af6497639c8.hot-update.json" for ::1 at 2020-06-09 18:45:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/497a08878af6497639c8.hot-update.json"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/portfolios" for ::1 at 2020-06-09 18:45:42 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 11.3ms | ActiveRecord: 0.9ms | Allocations: 956)
+
+
+Started GET "/" for ::1 at 2020-06-09 18:45:57 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jppolanco/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jppolanco/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 184.9ms | Allocations: 482)
+Completed 200 OK in 227ms (Views: 203.9ms | ActiveRecord: 0.0ms | Allocations: 2707)
+
+
