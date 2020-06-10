@@ -1,34 +1,37 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Login extends Component {
   state = {
     username: "",
-    password: ""
-  }
+    password: "",
+  };
 
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
-    })
-  }
+      [name]: value,
+    });
+  };
 
   render() {
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleLoginSubmit(this.state);
-        history.push('/');
-        this.setState({
-          username: "",
-          password: ""
-        })
-      }}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLoginSubmit(this.state);
+          history.push("/portfolios");
+          this.setState({
+            username: "",
+            password: "",
+          });
+        }}
+      >
         <h3>Login</h3>
-        <label htmlFor="username">username:
+        <label htmlFor="username">
+          username:
           <input
             id="username"
             type="text"
@@ -38,7 +41,8 @@ export default class Login extends Component {
           />
         </label>
         <br />
-        <label htmlFor="password">password:
+        <label htmlFor="password">
+          password:
           <input
             id="password"
             type="password"
@@ -48,9 +52,11 @@ export default class Login extends Component {
           />
         </label>
         <br />
-        <Link to='/user/register'>Register</Link>
+        <Link to="/user/register">
+          <button>Create Account</button>
+        </Link>
         <button>Submit</button>
       </form>
-    )
+    );
   }
 }

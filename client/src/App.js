@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Login from "./components/Login";
-import { loginUser } from "./services/auth";
+import { loginUser, registerUser} from "./services/auth";
+import Main from "./components/Main";
 
 export default class App extends Component {
   state = {
@@ -12,10 +13,18 @@ export default class App extends Component {
     this.setState({ currentUser });
   };
 
+  handleRegisterSubmit = async (registerData) => {
+    const currentUser = await registerUser(registerData);
+    this.setState({ currentUser });
+  }
+
   render() {
     return (
       <div>
-        <Login handleLoginSubmit={this.props.handleLoginSubmit} />
+        <Main
+          handleLoginSubmit={this.handleLoginSubmit}
+          handleRegisterSubmit={this.handleRegisterSubmit}
+        />
       </div>
     );
   }
