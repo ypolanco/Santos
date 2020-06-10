@@ -10,9 +10,9 @@ export default function ShowPortfolios(props) {
     <>
       <hr />
       <h3>Portfolios</h3>
-      {/* {portfolios.map((port) => (
+      {portfolios.map((port) => (
         <p key={port.id}>{port.name}</p>
-      ))} */}
+      ))}
     </>
   );
 }

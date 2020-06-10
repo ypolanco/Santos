@@ -15,7 +15,7 @@ export const createSecurities = async (securityData) => {
   return resp.data;
 };
 
-export const updateSecurities = async (id, portData) => {
+export const updateSecurities = async (id, securityData) => {
   const resp = await api.put(`/securities/${id}`, { security: securityData });
   return resp.data;
 };

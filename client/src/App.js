@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Login from "./components/Login";
-import { loginUser, registerUser} from "./services/auth";
+import { loginUser, registerUser, verifyUser, removeToken } from "./services/auth";
 import Main from "./components/Main";
+import Nav from "./components/Nav";
 
 export default class App extends Component {
   state = {
@@ -16,14 +17,33 @@ export default class App extends Component {
   handleRegisterSubmit = async (registerData) => {
     const currentUser = await registerUser(registerData);
     this.setState({ currentUser });
-  }
+  };
+
+  handleVerify = async () => {
+    const currentUser = await verifyUser();
+    this.setState({ currentUser });
+  };
+
+  handleLogout = () => {
+    this.setState({
+      currentUser: null,
+    });
+    localStorage.clear();
+    removeToken();
+  };
 
   render() {
     return (
       <div>
+        <Nav
+          currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
+        />
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
           handleRegisterSubmit={this.handleRegisterSubmit}
+          handleVerify={this.handleVerify}
+          currentUser={this.state.currentUser}
         />
       </div>
     );

@@ -3,10 +3,10 @@ import { Route } from "react-router-dom";
 import Login from "./Login";
 import { getAllPortfolios } from "../services/portfolio";
 import ShowPortfolios from "./ShowPortfolio";
-import Register from './Register';
+import Register from "./Register";
 // import { getAllFlavors } from '../services/flavors';
-// import { getAllFoods, createFood, deleteFood } from '../services/foods';
-// import ShowFlavors from './ShowFlavors';
+import { getAllSecurities, deleteSecurities } from "../services/securities";
+import ShowSecurities from './ShowSecurities';
 // import ShowFoods from './ShowFoods';
 // import CreateFood from './CreateFood';
 
@@ -18,7 +18,7 @@ export default class Main extends Component {
 
   componentDidMount() {
     this.getPortfolio();
-    // this.getFoods();
+    this.getSecurities();
   }
 
   // ============================
@@ -31,13 +31,13 @@ export default class Main extends Component {
   };
 
   // ============================
-  // ========== Foods ===========
+  // ========== Securities ===========
   // ============================
 
-  // getFoods = async () => {
-  //   const foods = await getAllFoods();
-  //   this.setState({ foods });
-  // }
+  getSecurities = async () => {
+    const securities = await getAllSecurities();
+    this.setState({ securities });
+  };
 
   // postFood = async (foodData) => {
   //   const newFood = await createFood(foodData);
@@ -46,17 +46,15 @@ export default class Main extends Component {
   //   }))
   // }
 
-  // destroyFood = async (id) => {
-  //   await deleteFood(id);
-  //   this.setState(prevState => ({
-  //     foods: prevState.foods.filter(food => food.id !== id)
-  //   }))
-  // }
-
-
+  destroySecurity = async (id) => {
+    await deleteSecurities(id);
+    this.setState(prevState => ({
+     securities: prevState.securities.filter(security => security.id !== id)
+    }))
+  }
 
   render() {
-    // console.log(this.state.portfolios)
+    console.log("user",this.props.currentUser)
     return (
       <main>
         <Route
@@ -68,24 +66,29 @@ export default class Main extends Component {
             />
           )}
         />
-       <Route path='/user/register' render={(props) => (
-          <Register
-            {...props}
-            handleRegisterSubmit={this.props.handleRegisterSubmit}
-          />
-        )} />
-        <Route path='/portfolios' render={() => (
-          <ShowPortfolios
-            portfolios={this.state.portfolios}
-          />
-        )} />
-        {/* <Route path='/foods' render={() => (
-          <ShowFoods
-            foods={this.state.foods}
-            currentUser={this.props.currentUser}
-            destroyFood={this.destroyFood}
-          />
-        )} /> */}
+        <Route
+          path="/user/register"
+          render={(props) => (
+            <Register
+              {...props}
+              handleRegisterSubmit={this.props.handleRegisterSubmit}
+            />
+          )}
+        />
+        <Route
+          path="/portfolios"
+          render={() => <ShowPortfolios portfolios={this.state.portfolios} />}
+        />
+        <Route
+          path="/securities"
+          render={() => (
+            <ShowSecurities
+              securities={this.state.securities}
+              currentUser={this.props.currentUser}
+              destroySecurity={this.destroySecurity}
+            />
+          )}
+        />
         {/* <Route path='/new/food' render={(props) => (
           <CreateFood
             {...props}
