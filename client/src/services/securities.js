@@ -1,7 +1,7 @@
 import api from "./api-helper";
 
 export const getAllSecurities = async () => {
-  const resp = await api.get("/securities");
+  const resp = await api.get("/portfolio/:id/securities");
   return resp.data;
 };
 

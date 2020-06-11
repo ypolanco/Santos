@@ -25,7 +25,7 @@ export const deletePortfolio = async (id) => {
   return resp;
 };
 
-export const portToSecurity = async (portId, securityId) => {
-  const resp = await api.get(`/portfolios/${portId}/security/${securityId}`);
-  return resp.data;
-}
+// export const portToSecurity = async (portId, securityId) => {
+//   const resp = await api.get(`/portfolios/${portId}/security/${securityId}`);
+//   return resp.data;
+// }

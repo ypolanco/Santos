@@ -75,7 +75,7 @@ export default class Main extends Component {
           )}
         />
         <Route
-          path="/portfolios/:id"
+          path="/portfolios/"
           render={() => <ShowPortfolios portfolios={this.state.portfolios} />}
         />
         {/* <Route
@@ -89,7 +89,7 @@ export default class Main extends Component {
           )}
         /> */}
         <Route
-          path="/securities"
+          path="/portfolio/:id/securities"
           render={() => (
             <ShowSecurities
               securities={this.state.securities}
