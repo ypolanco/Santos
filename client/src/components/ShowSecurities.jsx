@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ShowFoods(props) {
+export default function ShowSecurities(props) {
   const { securities, currentUser, destroySecurities } = props;
   console.log("securities",securities);
   console.log("Users", currentUser);
@@ -15,12 +15,11 @@ export default function ShowFoods(props) {
       {
         securities.map(security => (
           <React.Fragment key={security.id}>
-            
-            
-            <p>{security.ticker}</p>
+             <p>{security.ticker}</p>
             {
               currentUser && currentUser.id === security.portfolio_id && (
                 <>
+                  
                   <button>edit</button>
                   <button onClick={() => destroySecurities(security.id)}>delete</button>
                 </>

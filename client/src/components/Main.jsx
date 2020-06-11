@@ -12,7 +12,6 @@ import {
 import ShowSecurities from "./ShowSecurities";
 import CreateSecurity from "./CreateSecurity";
 
-
 export default class Main extends Component {
   state = {
     portfolio: [],
@@ -24,9 +23,7 @@ export default class Main extends Component {
     this.getSecurities();
   }
 
- 
   // ========== Portfolios =========
-
 
   getPortfolio = async () => {
     const portfolios = await getAllPortfolios();
@@ -34,7 +31,7 @@ export default class Main extends Component {
   };
 
   // ========== Securities ===========
-  
+
   getSecurities = async () => {
     const securities = await getAllSecurities();
     this.setState({ securities });
@@ -79,6 +76,16 @@ export default class Main extends Component {
         <Route
           path="/portfolios"
           render={() => <ShowPortfolios portfolios={this.state.portfolios} />}
+        />
+        <Route
+          path="/portfolios/:id"
+          render={() => (
+            <ShowSecurities
+              securities={this.state.securities}
+              currentUser={this.props.currentUser}
+              destroySecurity={this.destroySecurity}
+            />
+          )}
         />
         <Route
           path="/securities"

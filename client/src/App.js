@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import Login from "./components/Login";
-import { loginUser, registerUser, verifyUser, removeToken } from "./services/auth";
+import {
+  loginUser,
+  registerUser,
+  verifyUser,
+  removeToken,
+} from "./services/auth";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
 
@@ -30,6 +35,10 @@ export default class App extends Component {
     });
     localStorage.clear();
     removeToken();
+  };
+
+  componentDidMount = async () => {
+    await this.handleVerify();
   };
 
   render() {

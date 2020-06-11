@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio, only: [:show, :update, :destroy]
+  before_action :set_portfolio, only: %i[show update destroy]
 
   # GET /portfolios
   def index
@@ -38,14 +40,24 @@ class PortfoliosController < ApplicationController
     @portfolio.destroy
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_portfolio
-      @portfolio = Portfolio.find(params[:id])
-    end
+  def port_to_security
+    @port = Portfolio.find(params[:portfolio_id])
+    @security = Security.find(params[:id])
 
-    # Only allow a trusted parameter "white list" through.
-    def portfolio_params
-      params.require(:portfolio).permit(:name, :user_id)
-    end
+    @food.flavors << @flavor
+    # @flavor.foods.push(@food)
+    render json: @food, include: :flavors
+  end
+
+  private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_portfolio
+    @portfolio = Portfolio.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def portfolio_params
+    params.require(:portfolio).permit(:name, :user_id)
+  end
 end
