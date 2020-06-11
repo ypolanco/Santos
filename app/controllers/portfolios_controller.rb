@@ -40,13 +40,12 @@ class PortfoliosController < ApplicationController
     @portfolio.destroy
   end
 
+  #saw example from david not sure how this will work though 
   def port_to_security
     @port = Portfolio.find(params[:portfolio_id])
     @security = Security.find(params[:id])
-
-    @food.flavors << @flavor
-    # @flavor.foods.push(@food)
-    render json: @food, include: :flavors
+    @port.id << @security
+    render json: @port, include: :security
   end
 
   private

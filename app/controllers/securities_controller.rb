@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 class SecuritiesController < ApplicationController
-  before_action :set_security, only: [:show, :update, :destroy]
+  before_action :set_security, only: %i[show update destroy]
 
   # GET /securities
   def index
-    @securities = Security.all
+    @portfolio = Portfolio.find(params[:portfolio_id])
+    @securities = Security.where(portfolio_id: @portfolio.id)
 
-    render json: @securities
+    render json: @securities, include: :portfolio, status: :ok
   end
 
   # GET /securities/1
@@ -39,13 +42,14 @@ class SecuritiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_security
-      @security = Security.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def security_params
-      params.require(:security).permit(:porfolio_id, :ticker, :price, :ftWH, :ftWL, :purchase_price, :position_size)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_security
+    @security = Security.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def security_params
+    params.require(:security).permit(:porfolio_id, :ticker, :price, :ftWH, :ftWL, :purchase_price, :position_size)
+  end
 end

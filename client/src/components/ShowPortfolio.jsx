@@ -11,7 +11,7 @@ export default function ShowPortfolios(props) {
       <hr />
       <h3>Portfolios</h3>
       {portfolios.map((port) => (
-        <Link to={`/portfolios/${port.id}`} key={port.name}>
+        <Link to={`/security/${port.id}`} key={port.name}>
           <p key={port.id}>{port.name}</p>
         </Link>
       ))}

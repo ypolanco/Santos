@@ -56,7 +56,8 @@ export default class Main extends Component {
     return (
       <main>
         <Route
-          exact path="/"
+          exact
+          path="/"
           render={(props) => (
             <Login
               {...props}
@@ -74,11 +75,11 @@ export default class Main extends Component {
           )}
         />
         <Route
-          path="/portfolios"
+          path="/portfolios/:id"
           render={() => <ShowPortfolios portfolios={this.state.portfolios} />}
         />
-        <Route
-          path="/portfolios/:id"
+        {/* <Route
+          path="/securities/:id"
           render={() => (
             <ShowSecurities
               securities={this.state.securities}
@@ -86,7 +87,7 @@ export default class Main extends Component {
               destroySecurity={this.destroySecurity}
             />
           )}
-        />
+        /> */}
         <Route
           path="/securities"
           render={() => (
