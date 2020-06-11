@@ -11,7 +11,9 @@ export const getOneSecurity = async (id) => {
 };
 
 export const createSecurities = async (securityData) => {
-  const resp = await api.post("/securities", { security: securityData });
+  console.log("MFCCCCCCCCCCCC", securityData);
+  let security = {ticker: securityData.ticker}
+  const resp = await api.post(`/portfolios/${securityData.portfolio_id}/securities`, { security});
   return resp.data;
 };
 

@@ -3,9 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function ShowSecurities(props) {
   const [id, setId] = useState(props.match.match.params.id);
+  const [form, setForm] = useState({ticker: ""});
   console.log(props);
 
-  const { securities, currentUser, destroySecurities, getSecurities, portfolios } = props;
+  const {
+    securities,
+    currentUser,
+    destroySecurities,
+    getSecurities,
+    portfolios,
+    createSecurity,
+  } = props;
   console.log("securities", portfolios);
   // console.log("Users", currentUser);
 
@@ -19,6 +27,12 @@ export default function ShowSecurities(props) {
       setId(props.match.match.params.id);
     }
   }, [props.match.match.params.id]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    createSecurity(form);
+    setForm("");
+  };
 
   return (
     <>
@@ -40,6 +54,18 @@ export default function ShowSecurities(props) {
           )}
         </React.Fragment>
       ))}
+      {/*  */}
+      <form action="" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={form.ticker}
+          onChange={(e) =>
+            setForm({ ticker: e.target.value, portfolio_id: id })
+          }
+        />
+        <button type="submit">Submit</button>
+        {/* update state in this file  */}
+      </form>
       <br />
       {/* <Link to='/new/food'><button>Create</button></Link> */}
     </>

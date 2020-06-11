@@ -18,10 +18,14 @@ class SecuritiesController < ApplicationController
 
   # POST /securities
   def create
+    puts params
+    @portfolio = Portfolio.find(params[:portfolio_id])
     @security = Security.new(security_params)
+    @security.portfolio = @portfolio
 
     if @security.save
-      render json: @security, status: :created, location: @security
+      puts 'created'
+      render json: @security, status: :created
     else
       render json: @security.errors, status: :unprocessable_entity
     end
@@ -50,6 +54,6 @@ class SecuritiesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def security_params
-    params.require(:security).permit(:porfolio_id, :ticker, :price, :ftWH, :ftWL, :purchase_price, :position_size)
+    params.require(:security).permit( :ticker, :price, :ftWH, :ftWL, :purchase_price, :position_size)
   end
 end

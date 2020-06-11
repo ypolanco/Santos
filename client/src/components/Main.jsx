@@ -87,6 +87,15 @@ export default class Main extends Component {
     }));
   };
 
+  newSecurity = async (securityData) => {
+    const newSecurity = await createSecurities(securityData);
+    console.log(newSecurity);
+
+    this.setState((prevState) => ({
+      securities: [...prevState.securities , newSecurity ],
+    }));
+  };
+
   render() {
     console.log("securities", this.state.securities);
     return (
@@ -145,6 +154,7 @@ export default class Main extends Component {
               destroySecurity={this.destroySecurity}
               getSecurities={this.getSecurities}
               portfolios={this.state.portfolios}
+              createSecurity={this.newSecurity}
             />
           )}
         />
