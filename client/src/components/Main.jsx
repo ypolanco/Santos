@@ -56,7 +56,7 @@ export default class Main extends Component {
     return (
       <main>
         <Route
-          path="/user/login"
+          exact path="/"
           render={(props) => (
             <Login
               {...props}

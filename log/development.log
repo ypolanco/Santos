@@ -4713,3 +4713,1590 @@ Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2645)
 Completed 200 OK in 661ms (Views: 652.0ms | ActiveRecord: 8.3ms | Allocations: 2819)
 
 
+Started GET "/securities" for ::1 at 2020-06-10 20:43:23 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 20:43:23 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (13.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 27ms (Views: 6.9ms | ActiveRecord: 7.3ms | Allocations: 7511)
+
+
+Completed 200 OK in 42ms (Views: 10.2ms | ActiveRecord: 25.5ms | Allocations: 15287)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:47:54 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:47:54 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (11.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (15.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 11.5ms | Allocations: 1342)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 41ms (Views: 21.6ms | ActiveRecord: 15.8ms | Allocations: 2674)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:53:00 -0400
+Processing by PortfoliosController#index as HTML
+Started GET "/securities" for ::1 at 2020-06-10 20:53:00 -0400
+  [1m[36mPortfolio Load (11.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 9.7ms | ActiveRecord: 11.1ms | Allocations: 1431)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (6.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 6.5ms | Allocations: 1363)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:53:07 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:53:07 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (1.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (8.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 1338)
+
+
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 8.1ms | Allocations: 2753)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:53:26 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:53:26 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (33.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 5.2ms | ActiveRecord: 33.7ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:53:50 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:53:50 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (2.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.1ms | Allocations: 1188)
+
+
+  [1m[36mSecurity Load (9.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 9.1ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:55:10 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:55:10 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:02 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:56:02 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (3.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 3.0ms | Allocations: 1064)
+
+
+  [1m[36mSecurity Load (10.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 2.5ms | ActiveRecord: 10.2ms | Allocations: 2632)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:04 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:56:04 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 1063)
+
+
+  [1m[36mSecurity Load (3.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 3.6ms | Allocations: 2629)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 20:56:05 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:05 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (13.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 3.5ms | ActiveRecord: 13.7ms | Allocations: 1587)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (5.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 5.1ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:06 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:56:06 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 1844)
+
+
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:07 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:56:07 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (0.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 1202)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.9ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:19 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:56:19 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.5ms | Allocations: 1731)
+
+
+  [1m[36mPortfolio Load (5.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 5.8ms | Allocations: 2510)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 20:56:23 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 20:56:23 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Processing by PortfoliosController#index as HTML
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1731)
+
+
+  [1m[36mPortfolio Load (12.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 2.7ms | ActiveRecord: 12.5ms | Allocations: 1848)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 20:58:09 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 20:58:09 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 1063)
+
+
+  [1m[36mSecurity Load (18.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 4.3ms | ActiveRecord: 18.9ms | Allocations: 2938)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:58:14 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:58:14 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (3.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.8ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:58:17 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:58:17 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (2.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.7ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:58:21 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:58:21 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 1511)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 2426)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:58:31 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:58:31 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (18.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 3.7ms | ActiveRecord: 18.7ms | Allocations: 1303)
+
+
+  [1m[36mPortfolio Load (26.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 3.3ms | ActiveRecord: 26.4ms | Allocations: 2938)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 20:59:05 -0400
+Started GET "/securities" for ::1 at 2020-06-10 20:59:05 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (1.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 2.6ms | ActiveRecord: 1.6ms | Allocations: 1307)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 21:02:45 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 21:02:45 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (14.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (16.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 11.5ms | ActiveRecord: 14.9ms | Allocations: 1725)
+
+
+Completed 200 OK in 36ms (Views: 17.2ms | ActiveRecord: 16.9ms | Allocations: 2395)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:02:53 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:02:53 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.6ms | Allocations: 1378)
+
+
+  [1m[36mSecurity Load (3.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.4ms | Allocations: 2510)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-10 21:03:40 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jp"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 293ms (Views: 0.5ms | ActiveRecord: 31.6ms | Allocations: 6918)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:04:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:04:35 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Started GET "/auth/verify" for ::1 at 2020-06-10 21:04:35 -0400
+  [1m[36mSecurity Load (1.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.2ms | Allocations: 1686)
+
+
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.8ms | Allocations: 2640)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 1032)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:04:52 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:04:52 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.7ms | Allocations: 2084)
+
+
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:05:41 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:05:41 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:06:07 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:06:07 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 1203)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.0ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:06:12 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:06:12 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2084)
+
+
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-10 21:06:19 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jp"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 241ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1037)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:09:16 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:09:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-10 21:09:16 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 1.5ms | Allocations: 1844)
+
+
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 974)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:10:04 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:10:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-10 21:10:04 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (6.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.5ms | Allocations: 1956)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 6.6ms | Allocations: 2715)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 3489)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:10:21 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:10:21 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (2.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 2.0ms | Allocations: 2490)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:10:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:10:35 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1850)
+
+
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:12:14 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:12:14 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1725)
+
+
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 2420)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:12:47 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:12:47 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (7.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 7.4ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:12:48 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:12:48 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (3.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.0ms | Allocations: 1422)
+
+
+  [1m[36mPortfolio Load (3.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 4.5ms | ActiveRecord: 3.2ms | Allocations: 2468)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:16:53 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 21:16:53 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 21:17:06 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 21:17:06 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.5ms | Allocations: 1751)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:17:17 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:17:17 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 1.2ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (2.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.8ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:18:33 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:18:33 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Processing by SecuritiesController#index as HTML
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (1.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 1848)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:18:39 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:18:39 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 1075)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (4.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 4.0ms | Allocations: 1303)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 21:38:39 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 21:38:39 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (4.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (7.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 7.1ms | Allocations: 2457)
+
+
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 4.1ms | Allocations: 2423)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:38:56 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.2ms | Allocations: 1086)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 21:38:56 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 1318)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:38:59 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:38:59 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (27.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 2.2ms | ActiveRecord: 27.2ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (108.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 111ms (Views: 2.8ms | ActiveRecord: 108.4ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:39:01 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:39:01 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (114.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 117ms (Views: 2.6ms | ActiveRecord: 114.7ms | Allocations: 1732)
+
+
+  [1m[36mPortfolio Load (22.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 2.1ms | ActiveRecord: 22.4ms | Allocations: 2511)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:39:11 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:39:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (2.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1202)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.4ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:39:18 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:39:18 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:43:29 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:43:29 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (3.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 3.4ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:45:36 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:45:36 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (2.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 2.2ms | Allocations: 1482)
+
+
+  [1m[36mSecurity Load (5.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 5.2ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:50:38 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:50:38 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 19.0ms | ActiveRecord: 1.8ms | Allocations: 1618)
+
+
+  [1m[36mPortfolio Load (17.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 152ms (Views: 134.1ms | ActiveRecord: 17.1ms | Allocations: 2516)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:51:01 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:51:01 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1965)
+
+
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.3ms | Allocations: 2695)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:13 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:13 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (17.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 10.1ms | ActiveRecord: 17.8ms | Allocations: 1378)
+
+
+  [1m[36mSecurity Load (26.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 4.6ms | ActiveRecord: 26.7ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:16 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:16 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1202)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.3ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:18 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:18 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (4.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 4.6ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:37 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:37 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (3.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.3ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (10.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 2.5ms | ActiveRecord: 10.8ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:39 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:39 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 2084)
+
+
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:41 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:41 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (12.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 3.2ms | ActiveRecord: 12.3ms | Allocations: 1087)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (6.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 6.0ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:54:52 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:54:52 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 1482)
+
+
+  [1m[36mSecurity Load (1.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.9ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:07 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:07 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.7ms | Allocations: 2084)
+
+
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:11 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (19.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (18.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 23ms (Views: 4.1ms | ActiveRecord: 19.0ms | Allocations: 1208)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 7.7ms | ActiveRecord: 18.7ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:14 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:14 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (3.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 3.9ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 1066)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:16 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:16 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (1.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 1.1ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (4.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 1.5ms | ActiveRecord: 4.7ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:21 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:21 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1844)
+
+
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:31 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:31 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 2090)
+
+
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:55:33 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:55:33 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 21:59:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 21:59:35 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 1449)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.9ms | Allocations: 2511)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:00:41 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:00:41 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1303)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:01:28 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:01:28 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.9ms | Allocations: 1517)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.0ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:01:36 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:01:36 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 1502)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.0ms | Allocations: 2489)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:01:39 -0400
+Processing by PortfoliosController#index as HTML
+Started GET "/securities" for ::1 at 2020-06-10 22:01:39 -0400
+  [1m[36mPortfolio Load (15.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 2.6ms | ActiveRecord: 15.9ms | Allocations: 1408)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (1.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:01:40 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:01:40 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.7ms | Allocations: 1742)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.2ms | Allocations: 2432)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:01:54 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:01:54 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (50.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 52ms (Views: 1.8ms | ActiveRecord: 50.5ms | Allocations: 1185)
+
+
+  [1m[36mSecurity Load (37.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 75ms (Views: 36.8ms | ActiveRecord: 37.9ms | Allocations: 2513)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:02:29 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1063)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 22:02:29 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (2.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.9ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:02:36 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:02:36 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (6.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 6.4ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (5.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 5.5ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:02:38 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:02:38 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.8ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (2.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.7ms | Allocations: 2510)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 22:02:45 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 22:02:45 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1844)
+
+
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:03:20 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:03:20 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Processing by SecuritiesController#index as HTML
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1506)
+
+
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 1848)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:03:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:03:35 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 2084)
+
+
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:03:56 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:03:56 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (2.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (1.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.8ms | Allocations: 2038)
+
+
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.8ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:04:11 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:04:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1844)
+
+
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 2295)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:04:16 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:04:16 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (8.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 8.8ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (69.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 74ms (Views: 4.9ms | ActiveRecord: 69.0ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:05:59 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:05:59 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (7.9ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 7.9ms | Allocations: 1416)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (58.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 62ms (Views: 3.0ms | ActiveRecord: 58.3ms | Allocations: 1063)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:06:13 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:06:13 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (2.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 2.1ms | Allocations: 1423)
+
+
+  [1m[36mPortfolio Load (6.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 6.5ms | Allocations: 2511)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:06:18 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:06:18 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1448)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 2452)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:13 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:13 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (83.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 94ms (Views: 9.1ms | ActiveRecord: 83.4ms | Allocations: 1731)
+
+
+  [1m[36mPortfolio Load (98.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 101ms (Views: 2.3ms | ActiveRecord: 98.5ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:16 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:16 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (3.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Processing by SecuritiesController#index as HTML
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 3.3ms | Allocations: 1372)
+
+
+  [1m[36mSecurity Load (3.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.2ms | Allocations: 1518)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:31 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:31 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (13.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 16ms (Views: 2.3ms | ActiveRecord: 13.7ms | Allocations: 1063)
+
+
+  [1m[36mSecurity Load (28.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 40.7ms | ActiveRecord: 28.1ms | Allocations: 2938)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:33 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:33 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (3.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 3.3ms | Allocations: 1303)
+
+
+  [1m[36mPortfolio Load (20.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 48ms (Views: 26.5ms | ActiveRecord: 20.9ms | Allocations: 2929)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:35 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (13.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 11.0ms | ActiveRecord: 13.6ms | Allocations: 1482)
+
+
+  [1m[36mSecurity Load (15.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 13.7ms | ActiveRecord: 15.8ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:40 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:40 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 1844)
+
+
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.3ms | Allocations: 2277)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:11:50 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:11:50 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (5.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 1443)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 5.6ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:17:36 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:17:36 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (0.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 1278)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.7ms | Allocations: 2639)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:19:07 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:19:07 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (1.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 1758)
+
+
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 2467)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:19:33 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:19:33 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (2.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 2.2ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (2.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.2ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:19:43 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:19:43 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms | Allocations: 1063)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:20:11 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:20:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (2.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 2.0ms | Allocations: 1182)
+
+
+  [1m[36mSecurity Load (3.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.7ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:22:43 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:22:43 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (2.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.9ms | Allocations: 1203)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 2.0ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:23:11 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:23:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1965)
+
+
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 2419)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:23:13 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:23:13 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (17.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (1.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 20ms (Views: 2.4ms | ActiveRecord: 17.2ms | Allocations: 1511)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:29:35 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:29:35 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (1.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Processing by SecuritiesController#index as HTML
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 1.6ms | Allocations: 1699)
+
+
+  [1m[36mSecurity Load (3.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 3.5ms | Allocations: 1976)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:29:39 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:29:39 -0400
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Processing by PortfoliosController#index as HTML
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1731)
+
+
+  [1m[36mPortfolio Load (4.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 4.9ms | Allocations: 1848)
+
+
+Started GET "/securities" for ::1 at 2020-06-10 22:31:15 -0400
+Started GET "/portfolios" for ::1 at 2020-06-10 22:31:15 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (3.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.4ms | Allocations: 1492)
+
+
+  [1m[36mSecurity Load (38.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 3.2ms | ActiveRecord: 38.3ms | Allocations: 2504)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:32:12 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:32:12 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1176)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (10.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 10.5ms | Allocations: 1361)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:32:17 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:32:17 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1072)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (3.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 3.8ms | Allocations: 1303)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:32:21 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:32:21 -0400
+Processing by SecuritiesController#index as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mSecurity Load (1.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.4ms | Allocations: 1731)
+
+
+  [1m[36mPortfolio Load (3.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 3.6ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:32:23 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:32:23 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (70.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 72ms (Views: 2.0ms | ActiveRecord: 70.1ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (76.0ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 79ms (Views: 3.2ms | ActiveRecord: 76.0ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:34:48 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:34:48 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.7ms | Allocations: 1491)
+
+
+  [1m[36mSecurity Load (4.6ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 4.6ms | Allocations: 2490)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:36:39 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:36:39 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (9.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 22ms (Views: 10.1ms | ActiveRecord: 9.2ms | Allocations: 1188)
+
+
+  [1m[36mSecurity Load (20.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 3.7ms | ActiveRecord: 20.8ms | Allocations: 2510)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:36:56 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:36:56 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mSecurity Load (2.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms | Allocations: 1208)
+
+
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 2.1ms | Allocations: 2510)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-10 22:41:24 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jp"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 278ms (Views: 3.0ms | ActiveRecord: 8.5ms | Allocations: 1066)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:41:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-10 22:41:48 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:41:48 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (13.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 13.5ms | Allocations: 1566)
+
+
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 14.0ms | Allocations: 2124)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (2.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 2.1ms | Allocations: 1376)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-10 22:46:34 -0400
+Started GET "/securities" for ::1 at 2020-06-10 22:46:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-10 22:46:34 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (65.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 74ms (Views: 7.0ms | ActiveRecord: 65.6ms | Allocations: 1384)
+
+
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 1103)
+
+
+Processing by SecuritiesController#index as HTML
+  [1m[36mSecurity Load (0.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities"[0m
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1303)
+
+

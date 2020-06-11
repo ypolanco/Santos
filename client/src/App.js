@@ -8,6 +8,8 @@ import {
 } from "./services/auth";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
+import { Route } from "react-router-dom";
+import "./App.css"
 
 export default class App extends Component {
   state = {
@@ -44,10 +46,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Nav
+        {/* <Nav
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
-        />
+        /> */}
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
           handleRegisterSubmit={this.handleRegisterSubmit}
