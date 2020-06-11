@@ -2,7 +2,7 @@
 
 class PortfoliosController < ApplicationController
   before_action :set_portfolio, only: %i[show update destroy]
-
+  before_action :authorize_request, only: %i[create]
   # GET /portfolios
   def index
     @portfolios = Portfolio.all
@@ -18,7 +18,7 @@ class PortfoliosController < ApplicationController
   # POST /portfolios
   def create
     @portfolio = Portfolio.new(portfolio_params)
-
+    @portfolio.user = @current_user
     if @portfolio.save
       render json: @portfolio, status: :created, location: @portfolio
     else
@@ -40,7 +40,7 @@ class PortfoliosController < ApplicationController
     @portfolio.destroy
   end
 
-  #saw example from david not sure how this will work though 
+  # saw example from david not sure how this will work though
   def port_to_security
     @port = Portfolio.find(params[:portfolio_id])
     @security = Security.find(params[:id])

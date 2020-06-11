@@ -1,7 +1,7 @@
 import api from "./api-helper";
 
-export const getAllSecurities = async () => {
-  const resp = await api.get("/portfolio/:id/securities");
+export const getAllSecurities = async (id) => {
+  const resp = await api.get(`/portfolios/${id}/securities`);
   return resp.data;
 };
 
@@ -20,7 +20,7 @@ export const updateSecurities = async (id, securityData) => {
   return resp.data;
 };
 
-export const deleteSecurities= async (id) => {
+export const deleteSecurities = async (id) => {
   const resp = await api.delete(`/securities/${id}`);
   return resp;
 };

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import Login from "./Login";
-import { getAllPortfolios } from "../services/portfolio";
+import {
+  getAllPortfolios,
+  createPortfolio,
+  deletePortfolio,
+  updatePortfolio,
+} from "../services/portfolio";
 import ShowPortfolios from "./ShowPortfolio";
 import Register from "./Register";
 import {
@@ -11,16 +16,18 @@ import {
 } from "../services/securities";
 import ShowSecurities from "./ShowSecurities";
 import CreateSecurity from "./CreateSecurity";
+import CreatePortfolio from "./CreatePortfolio";
+import UpdatePortfolio from "./UpdatePortfolio";
 
 export default class Main extends Component {
   state = {
-    portfolio: [],
+    portfolios: [],
     securities: [],
   };
 
   componentDidMount() {
     this.getPortfolio();
-    this.getSecurities();
+    // this.getSecurities();
   }
 
   // ========== Portfolios =========
@@ -30,10 +37,39 @@ export default class Main extends Component {
     this.setState({ portfolios });
   };
 
+  newPortfolio = async (portData) => {
+    const newPortfolio = await createPortfolio(portData);
+    console.log(newPortfolio);
+
+    this.setState((prevState) => ({
+      portfolios: [...prevState.portfolios, newPortfolio],
+    }));
+  };
+
+  destroyPortfolio = async (id) => {
+    await deletePortfolio(id);
+    this.setState((prevState) => ({
+      portfolios: prevState.portfolios.filter((port) => port.id !== id),
+    }));
+  };
+
+  putPortfolio = async (id, portData) => {
+    const updatePort = await updatePortfolio(id, portData);
+    console.log(this.state);
+    console.log(updatePort);
+    console.log(id);
+
+    this.setState((prevState) => ({
+      portfolios: prevState.portfolios.map((port) =>
+        port.id === id ? updatePort : port
+      ),
+    }));
+  };
+
   // ========== Securities ===========
 
-  getSecurities = async () => {
-    const securities = await getAllSecurities();
+  getSecurities = async (id) => {
+    const securities = await getAllSecurities(id);
     this.setState({ securities });
   };
 
@@ -52,7 +88,7 @@ export default class Main extends Component {
   };
 
   render() {
-    console.log("user", this.props.currentUser);
+    console.log("securities", this.state.securities);
     return (
       <main>
         <Route
@@ -76,26 +112,46 @@ export default class Main extends Component {
         />
         <Route
           path="/portfolios/"
-          render={() => <ShowPortfolios portfolios={this.state.portfolios} />}
-        />
-        {/* <Route
-          path="/securities/:id"
           render={() => (
-            <ShowSecurities
-              securities={this.state.securities}
-              currentUser={this.props.currentUser}
-              destroySecurity={this.destroySecurity}
+            <ShowPortfolios
+              portfolios={this.state.portfolios}
+              destroyPortfolio={this.destroyPortfolio}
             />
           )}
-        /> */}
+        />
         <Route
-          path="/portfolio/:id/securities"
-          render={() => (
+          path="/portfolios/:id/edit"
+          render={(props) => {
+            const portId = props.match.params.id;
+            const portfolio = this.state.portfolios.find(
+              (port) => port.id === parseInt(portId)
+            );
+            return (
+              <UpdatePortfolio
+                {...props}
+                portfolios={portfolio}
+                putPortfolio={this.putPortfolio}
+              />
+            );
+          }}
+        />
+        <Route
+          path="/portfolios/:id/securities"
+          render={(match) => (
             <ShowSecurities
+              match={match}
               securities={this.state.securities}
               currentUser={this.props.currentUser}
               destroySecurity={this.destroySecurity}
+              getSecurities={this.getSecurities}
+              portfolios={this.state.portfolios}
             />
+          )}
+        />
+        <Route
+          path="/new/portfolio"
+          render={(props) => (
+            <CreatePortfolio {...props} postPortfolio={this.newPortfolio} />
           )}
         />{" "}
         <Route
