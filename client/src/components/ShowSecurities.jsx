@@ -43,7 +43,10 @@ export default function ShowSecurities(props) {
       <h3>Securities</h3>
       {securities.map((security) => (
         <React.Fragment key={security.id}>
-          <p>{security.ticker}</p>
+          <h4>{security.ticker}</h4>
+          <p>{security.price}</p>
+          <p>{security.ftWH}</p>
+          <p>{security.ftWH}</p>
           {currentUser && currentUser.id === security.portfolio_id && (
             <>
               <button>edit</button>

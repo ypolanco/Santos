@@ -28826,3 +28826,579 @@ Processing by SecuritiesController#create as HTML
 Completed 201 Created in 41ms (Views: 0.5ms | ActiveRecord: 15.5ms | Allocations: 3169)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-11 17:27:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:27:40 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (1.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.4ms | Allocations: 1511)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 2451)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:35:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:35:16 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1001)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 1339)
+
+
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:35:29 -0400
+Started GET "/portfolios" for ::1 at 2020-06-11 17:35:29 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 21.2ms | Allocations: 1350)
+
+
+  [1m[36mPortfolio Load (22.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 2.5ms | ActiveRecord: 22.0ms | Allocations: 2262)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-11 17:41:04 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jp ", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jp ", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jp "], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.7ms | Allocations: 1317)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:9:in `login'
+Started GET "/portfolios/5/securities" for ::1 at 2020-06-11 17:41:08 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"5"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 5]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mCACHE Portfolio Load (0.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 1.5ms | Allocations: 13103)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:41:11 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (1.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 3.9ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:41:54 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:41:54 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 1281)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:41:54 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (3.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 3.8ms | Allocations: 2787)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 973)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:41:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:41:58 -0400
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:41:58 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (15.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 18ms (Views: 2.2ms | ActiveRecord: 15.1ms | Allocations: 1769)
+
+
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.8ms | Allocations: 2307)
+
+
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 69ms (Views: 3.8ms | ActiveRecord: 1.5ms | Allocations: 2840)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:41:59 -0400
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:41:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:41:59 -0400
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (21.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 25ms (Views: 3.3ms | ActiveRecord: 21.0ms | Allocations: 2207)
+
+
+  [1m[36mPortfolio Load (23.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mUser Load (27.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mSecurity Load (4.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+Completed 200 OK in 31ms (Views: 0.3ms | ActiveRecord: 27.3ms | Allocations: 2999)
+
+
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (5.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 42ms (Views: 6.6ms | ActiveRecord: 33.0ms | Allocations: 5506)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:05 -0400
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:05 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1281)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 885)
+
+
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (6.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 20ms (Views: 3.5ms | ActiveRecord: 8.1ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:11 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:11 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (1.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 1.6ms | Allocations: 1799)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:11 -0400
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 2394)
+
+
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (4.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.3ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 11ms (Views: 3.6ms | ActiveRecord: 4.9ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:40 -0400
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:40 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (2.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (3.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mUser Load (52.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mPortfolio Load (50.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mPortfolio Load (28.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 56ms (Views: 0.3ms | ActiveRecord: 52.8ms | Allocations: 4780)
+
+
+Completed 200 OK in 55ms (Views: 4.0ms | ActiveRecord: 50.4ms | Allocations: 4847)
+
+
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 43ms (Views: 7.0ms | ActiveRecord: 34.3ms | Allocations: 5133)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:43 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 885)
+
+
+Processing by PortfoliosController#index as HTML
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:43 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mPortfolio Load (10.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 10.1ms | Allocations: 2600)
+
+
+  [1m[36mSecurity Load (32.2ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 38ms (Views: 3.1ms | ActiveRecord: 33.1ms | Allocations: 4154)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:51 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1300)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:51 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by SecuritiesController#index as HTML
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Parameters: {"portfolio_id"=>"6"}
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 1328)
+
+
+  [1m[36mPortfolio Load (10.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (1.1ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 20ms (Views: 6.0ms | ActiveRecord: 11.8ms | Allocations: 3235)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:42:53 -0400
+Processing by PortfoliosController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:42:53 -0400
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1318)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 885)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:42:53 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (0.4ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.1ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:43:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:43:14 -0400
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:43:14 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (2.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.6ms | Allocations: 2714)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 3217)
+
+
+  [1m[36mSecurity Load (0.5ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 76ms (Views: 4.4ms | ActiveRecord: 2.1ms | Allocations: 5154)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:43:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:43:15 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1757)
+
+
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2214)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:43:15 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (12.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (2.8ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (10.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 33ms (Views: 4.4ms | ActiveRecord: 26.3ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 17:43:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 17:43:34 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1296)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 885)
+
+
+Started GET "/portfolios/6/securities" for ::1 at 2020-06-11 17:43:34 -0400
+Processing by SecuritiesController#index as HTML
+  Parameters: {"portfolio_id"=>"6"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:8:in `index'
+  [1m[36mSecurity Load (1.7ms)[0m  [1m[34mSELECT "securities".* FROM "securities" WHERE "securities"."portfolio_id" = $1[0m  [["portfolio_id", 6]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+  [1m[36mPortfolio Load (1.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/securities_controller.rb:11:in `index'
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 3.1ms | Allocations: 2732)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:41:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:41:23 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 1.5ms | Allocations: 973)
+
+
+  [1m[36mPortfolio Load (11.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 8.2ms | ActiveRecord: 11.2ms | Allocations: 2578)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:49:08 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:49:08 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 1.5ms | ActiveRecord: 10.2ms | Allocations: 1554)
+
+
+  [1m[36mPortfolio Load (110.2ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 119ms (Views: 7.0ms | ActiveRecord: 110.2ms | Allocations: 2373)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:49:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:49:38 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (7.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 6.7ms | Allocations: 1547)
+
+
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 7.1ms | Allocations: 2195)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:49:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:49:50 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (68.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 68.2ms | Allocations: 1010)
+
+
+  [1m[36mPortfolio Load (15.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 85ms (Views: 69.7ms | ActiveRecord: 15.1ms | Allocations: 2263)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:50:24 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:50:24 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (22.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  [1m[36mUser Load (20.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 20.7ms | Allocations: 1547)
+
+
+Completed 200 OK in 28ms (Views: 5.1ms | ActiveRecord: 22.8ms | Allocations: 2512)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 18:50:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 18:50:49 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 885)
+
+
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 1281)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:02:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:02:22 -0400
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (1.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 1.6ms | Allocations: 1974)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 18.8ms | Allocations: 1793)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:02:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:02:47 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (1.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.8ms | Allocations: 1453)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 11.6ms | Allocations: 2339)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:03:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:03:43 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1007)
+
+
+  [1m[36mPortfolio Load (23.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 32ms (Views: 8.4ms | ActiveRecord: 23.6ms | Allocations: 2260)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:08:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:08:46 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 8.0ms | Allocations: 1316)
+
+
+  [1m[36mPortfolio Load (8.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 8.5ms | Allocations: 2260)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:09:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:09:12 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (59.7ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 64ms (Views: 4.1ms | ActiveRecord: 59.7ms | Allocations: 1767)
+
+
+  [1m[36mUser Load (133.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 136ms (Views: 0.5ms | ActiveRecord: 133.4ms | Allocations: 2307)
+
+
+Started GET "/portfolios" for ::1 at 2020-06-11 19:21:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 19:21:12 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by PortfoliosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 2.4ms | ActiveRecord: 1.9ms | Allocations: 1526)
+
+
+  [1m[36mPortfolio Load (10.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 10.5ms | Allocations: 2388)
+
+
