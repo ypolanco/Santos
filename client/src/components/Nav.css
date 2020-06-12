@@ -28,6 +28,17 @@
       color: white;
     }
 
+    .nav-logout{
+      font-family: "Ubuntu", sans-serif;
+      margin-top: 51px;
+      margin-right: 30px;
+      height: 30px;
+      width: 150px;
+      border-radius: 10px;
+      color: white;
+      background-color: #980d0d;
+    }
+
    }
 
 @media only screen 
