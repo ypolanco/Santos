@@ -20,7 +20,6 @@ import CreatePortfolio from "./CreatePortfolio";
 import UpdatePortfolio from "./UpdatePortfolio";
 import Nav from "./Nav";
 
-
 export default class Main extends Component {
   state = {
     portfolios: [],
@@ -94,7 +93,7 @@ export default class Main extends Component {
     console.log(newSecurity);
 
     this.setState((prevState) => ({
-      securities: [...prevState.securities , newSecurity ],
+      securities: [...prevState.securities, newSecurity],
     }));
   };
 
@@ -102,83 +101,85 @@ export default class Main extends Component {
     console.log("securities", this.state.securities);
     return (
       <>
-        <Nav
-          currentUser={this.props.currentUser}
-          handleLogout={this.props.handleLogout}
-        />
-      <main>
-        <Route
-          exact
-          path="/"
-          render={(props) => (
-            <Login
-              {...props}
-              handleLoginSubmit={this.props.handleLoginSubmit}
-            />
-          )}
-        />
-        <Route
-          path="/user/register"
-          render={(props) => (
-            <Register
-              {...props}
-              handleRegisterSubmit={this.props.handleRegisterSubmit}
-            />
-          )}
-        />
-        <Route
-          path="/portfolios/"
-          render={() => (
-            <ShowPortfolios
-              portfolios={this.state.portfolios}
-              destroyPortfolio={this.destroyPortfolio}
-            />
-          )}
-        />
-        <Route
-          path="/portfolios/:id/edit"
-          render={(props) => {
-            const portId = props.match.params.id;
-            const portfolio = this.state.portfolios.find(
-              (port) => port.id === parseInt(portId)
-            );
-            return (
-              <UpdatePortfolio
+        <Route path="/portfolios/">
+          <Nav
+            currentUser={this.props.currentUser}
+            handleLogout={this.props.handleLogout}
+          />
+        </Route>
+        <main>
+          <Route
+            exact
+            path="/"
+            render={(props) => (
+              <Login
                 {...props}
-                portfolios={portfolio}
-                putPortfolio={this.putPortfolio}
+                handleLoginSubmit={this.props.handleLoginSubmit}
               />
-            );
-          }}
-        />
-        <Route
-          path="/portfolios/:id/securities"
-          render={(match) => (
-            <ShowSecurities
-              match={match}
-              securities={this.state.securities}
-              currentUser={this.props.currentUser}
-              destroySecurity={this.destroySecurity}
-              getSecurities={this.getSecurities}
-              portfolios={this.state.portfolios}
-              createSecurity={this.newSecurity}
-            />
-          )}
-        />
-        <Route
-          path="/new/portfolio"
-          render={(props) => (
-            <CreatePortfolio {...props} postPortfolio={this.newPortfolio} />
-          )}
-        />{" "}
-        <Route
-          path="/new/security"
-          render={(props) => (
-            <CreateSecurity {...props} postSecurity={this.postSecurity} />
-          )}
-        />{" "}
+            )}
+          />
+          <Route
+            path="/user/register"
+            render={(props) => (
+              <Register
+                {...props}
+                handleRegisterSubmit={this.props.handleRegisterSubmit}
+              />
+            )}
+          />
+          <Route
+            path="/portfolios/"
+            render={() => (
+              <ShowPortfolios
+                portfolios={this.state.portfolios}
+                destroyPortfolio={this.destroyPortfolio}
+              />
+            )}
+          />
+          <Route
+            path="/portfolios/:id/edit"
+            render={(props) => {
+              const portId = props.match.params.id;
+              const portfolio = this.state.portfolios.find(
+                (port) => port.id === parseInt(portId)
+              );
+              return (
+                <UpdatePortfolio
+                  {...props}
+                  portfolios={portfolio}
+                  putPortfolio={this.putPortfolio}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/portfolios/:id/securities"
+            render={(match) => (
+              <ShowSecurities
+                match={match}
+                securities={this.state.securities}
+                currentUser={this.props.currentUser}
+                destroySecurity={this.destroySecurity}
+                getSecurities={this.getSecurities}
+                portfolios={this.state.portfolios}
+                createSecurity={this.newSecurity}
+              />
+            )}
+          />
+          <Route
+            path="/new/portfolio"
+            render={(props) => (
+              <CreatePortfolio {...props} postPortfolio={this.newPortfolio} />
+            )}
+          />{" "}
+          <Route
+            path="/new/security"
+            render={(props) => (
+              <CreateSecurity {...props} postSecurity={this.postSecurity} />
+            )}
+          />{" "}
         </main>
-        </>
+      </>
     );
   }
 }
