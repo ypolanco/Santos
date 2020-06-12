@@ -24,7 +24,9 @@ export default class Register extends Component {
       <>
         <div className="register">
           <div className="logo">
-            <img src={logo} alt="" className="logo-register" />
+            <Link to="/">
+              <img src={logo} alt="Santos Logo" className="logo" />
+            </Link>
           </div>
           <form
             className="form"
@@ -43,7 +45,8 @@ export default class Register extends Component {
             <label htmlFor="username" className="label">
               Username
             </label>
-            <input className="register-input"
+            <input
+              className="register-input"
               id="username"
               type="text"
               name="username"
@@ -54,25 +57,27 @@ export default class Register extends Component {
             <br />
             <label htmlFor="email" className="label">
               Email
-              </label>
-              <input className="register-input"
-                id="email"
-                type="text"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-              />
+            </label>
+            <input
+              className="register-input"
+              id="email"
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.handleChange}
+            />
             <br />
             <label htmlFor="password" className="label-register">
               Password
-              </label>
-              <input className="register-input"
-                id="password"
-                type="password"
-                name="password"
-                value={password}
-                onChange={this.handleChange}
-              />
+            </label>
+            <input
+              className="register-input"
+              id="password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleChange}
+            />
             <br />
             <button className="button">Create Account</button>
           </form>

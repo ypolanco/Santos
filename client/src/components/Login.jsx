@@ -22,7 +22,9 @@ export default class Login extends Component {
     return (
       <div className="login">
         <div className="logo">
-          <img src={logo} alt="Santos Logo" className="logo"/>
+          <Link to="/">
+            <img src={logo} alt="Santos Logo" className="logo" />
+            </Link>
         </div>
         <form className="form"
           onSubmit={(e) => {
