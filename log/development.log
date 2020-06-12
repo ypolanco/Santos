@@ -34899,3 +34899,26 @@ Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.3ms | Allocations: 1664)
 Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 2521)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-12 16:33:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-12 16:33:06 -0400
+  [1m[35m (19.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+Filter chain halted as :authorize_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 286)
+
+
+  [1m[35m (34.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (30.3ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 135ms (Views: 8.2ms | ActiveRecord: 104.6ms | Allocations: 7181)
+
+
+Started POST "/auth/login" for ::1 at 2020-06-12 16:33:56 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"jp", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jp"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:8:in `login'
+Completed 200 OK in 357ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 7984)
+
+
