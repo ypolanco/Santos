@@ -2,14 +2,14 @@
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .main-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .section {
@@ -19,6 +19,46 @@
     color: white;
     margin: 0px 0px;
   }
+
+  .add-button{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    margin: 0px 0px;
+  }
+
+  .title a{
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .plus{
+    color: lime;
+  }
+
+  .portfolios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: "Ubuntu", sans-serif;
+    padding: 10px; 
+    border: 2px solid yellow;
+  }
+  .portfolios a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+     
+
+  }
+  .port{
+    display:flex; 
+    border: 2px solid yellow;
+    width: 370px;
+    flex-grow: 2;
+  }
+
 }
 @media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
