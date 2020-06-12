@@ -55,6 +55,7 @@ export default class App extends Component {
           handleRegisterSubmit={this.handleRegisterSubmit}
           handleVerify={this.handleVerify}
           currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
         />
       </div>
     );

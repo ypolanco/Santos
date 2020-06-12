@@ -10,14 +10,13 @@ export default function Header(props) {
           ?
           <>{props.currentUser.username}<button onClick={props.handleLogout}>Logout</button></>
           :
-          <Link to='/user/login'>Login/Register</Link>
+          <Link to='/'></Link>
       }
       <hr />
       {
         props.currentUser && (
           <nav>
             <NavLink to="/portfolios">Portfolios</NavLink>
-            <NavLink to="/securities">Securities</NavLink>
           </nav>
         )
       }

@@ -18,6 +18,8 @@ import ShowSecurities from "./ShowSecurities";
 import CreateSecurity from "./CreateSecurity";
 import CreatePortfolio from "./CreatePortfolio";
 import UpdatePortfolio from "./UpdatePortfolio";
+import Nav from "./Nav";
+
 
 export default class Main extends Component {
   state = {
@@ -99,6 +101,11 @@ export default class Main extends Component {
   render() {
     console.log("securities", this.state.securities);
     return (
+      <>
+        <Nav
+          currentUser={this.props.currentUser}
+          handleLogout={this.props.handleLogout}
+        />
       <main>
         <Route
           exact
@@ -170,7 +177,8 @@ export default class Main extends Component {
             <CreateSecurity {...props} postSecurity={this.postSecurity} />
           )}
         />{" "}
-      </main>
+        </main>
+        </>
     );
   }
 }
