@@ -46,10 +46,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {/* <Nav
+        <Route path="/portfolios/">
+        <Nav
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
-        /> */}
+          />
+          </Route>
         <Main
           handleLoginSubmit={this.handleLoginSubmit}
           handleRegisterSubmit={this.handleRegisterSubmit}

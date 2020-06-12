@@ -101,12 +101,12 @@ export default class Main extends Component {
     console.log("securities", this.state.securities);
     return (
       <>
-        <Route path="/portfolios/">
+        {/* <Route path="/portfolios/">
           <Nav
             currentUser={this.props.currentUser}
             handleLogout={this.props.handleLogout}
           />
-        </Route>
+        </Route> */}
         <main>
           <Route
             exact
