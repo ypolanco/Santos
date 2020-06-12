@@ -5,7 +5,7 @@
     /* border: 2px solid red; */
   }
 
-  .title{
+  .title {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,55 +20,50 @@
     margin: 0px 0px;
   }
 
-  .add-button{
+  .add-button {
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
     margin: 0px 0px;
   }
 
-  .title a{
+  .title a {
     text-decoration: none;
     color: white;
-
   }
 
-  .plus{
+  .plus {
     color: lime;
   }
 
-  .portfolios{
+  .portfolios {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: "Ubuntu", sans-serif;
-    padding: 10px; 
-    border: 2px solid yellow;
+    padding: 10px;
+    /* border: 2px solid yellow; */
   }
-  .portfolios a{
+  .portfolios a {
     text-decoration: none;
     color: white;
     padding: 10px;
-     
-
   }
-  .port{
-    display:flex; 
-    border: 2px solid yellow;
+  .port {
+    display: flex;
+    /* border: 2px solid yellow; */
     width: 300px;
     flex-grow: 1;
-  
   }
 
-  .port-name{
+  .port-name {
     font-size: 15px;
     margin: 0;
   }
-  .port-name p{
+  .port-name p {
     font-size: 15px;
     margin: 0;
   }
-
 }
 @media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
 }
