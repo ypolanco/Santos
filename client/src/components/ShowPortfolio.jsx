@@ -23,9 +23,9 @@ export default function ShowPortfolios(props) {
         {portfolios.map((port) => (
           <div className="port">
             <Link to={`/portfolios/${port.id}/securities`} key={port.name}>
-              <p key={port.id} className="">{port.name}</p>
+              <p key={port.id} className="port-name">{port.name}</p>
             </Link>
-            <Link to={`/portfolios/${port.id}/edit`}>
+            <Link to={`/portfolios/${port.id}/edit`} className="port-name">
               <p>Edit Portfolio</p>
             </Link>
             <button onClick={() => destroyPortfolio(port.id)}>

@@ -55,8 +55,18 @@
   .port{
     display:flex; 
     border: 2px solid yellow;
-    width: 370px;
-    flex-grow: 2;
+    width: 300px;
+    flex-grow: 1;
+  
+  }
+
+  .port-name{
+    font-size: 15px;
+    margin: 0;
+  }
+  .port-name p{
+    font-size: 15px;
+    margin: 0;
   }
 
 }
