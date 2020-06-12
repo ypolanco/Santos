@@ -1,4 +1,78 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    .register{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 100px auto;
+      padding-top: 10px;
+    }
+    .logo-register {
+      height: 150px;
+      margin-bottom: 1px;
+    }
+  
+    .form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 70vw;
+    }
+  
+    .label-register {
+      font-family: "Ubuntu", sans-serif;
+      margin: 5px auto;
+      color: white;
+      font-size: 20px;
+    }
+  
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 20vw;
+      height: 4vh;
+      margin: 5px auto;
+      background-color: #2c5306;
+      color: white;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+  
+    .button:hover {
+      cursor: pointer;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+    .header {
+      font-family: "Ubuntu", sans-serif;
+      color: white;
+      font-size: 25px;
+      text-align: center;
+      margin: 10px;
+    }
+  
+    .register-input {
+      margin: auto;
+      width: 25vw;
+      height: 20px;
+    }
+    .input:hover {
+      cursor: text;
+    }
+    .input:focus {
+      outline: none !important;
+      border-bottom: 3px solid olive;
+    }
+
+
+   }
 
 @media only screen 
   and (min-device-width: 834px) 
