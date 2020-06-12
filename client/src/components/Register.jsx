@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/SantosLogo.png";
+import "./Register.css"
 
 export default class Register extends Component {
   state = {
@@ -23,7 +24,7 @@ export default class Register extends Component {
       <>
         <div className="register">
           <div className="logo">
-            <img src={logo} alt="" className="logo" />
+            <img src={logo} alt="" className="logo-register" />
           </div>
           
           <form className="form"
