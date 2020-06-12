@@ -30396,3 +30396,17 @@ Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 1865)
 Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.2ms | Allocations: 2045)
 
 
+Started GET "/portfolios" for ::1 at 2020-06-11 22:02:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-06-11 22:02:02 -0400
+Processing by PortfoliosController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mPortfolio Load (71.1ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  ↳ app/controllers/portfolios_controller.rb:10:in `index'
+Completed 200 OK in 85ms (Views: 11.5ms | ActiveRecord: 71.1ms | Allocations: 1767)
+
+
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 28ms (Views: 0.7ms | ActiveRecord: 23.1ms | Allocations: 2307)
+
+
