@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import "./CreatePortfolio.css"
+import logo from "./images/SantosLogo.png";
 
 export default class CreatePortfolio extends Component {
   state = {
@@ -16,6 +18,8 @@ export default class CreatePortfolio extends Component {
     const { name } = this.state;
     const { postPortfolio, history } = this.props;
     return (
+      <div className="create-form">
+      <img src={logo} alt="Santos Logo" className="logo"/>
       <form onSubmit={(e) => {
         e.preventDefault();
         postPortfolio(this.state);
@@ -24,17 +28,19 @@ export default class CreatePortfolio extends Component {
           name: ""
         })
       }}>
-        <hr />
         <h3>Create Portfolio</h3>
-        <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name</label>
+          <br/>
         <input
           id="id"
           type="text"
           value={name}
-          onChange={this.handleChange}
+            onChange={this.handleChange}
+            className="input-create-port"
         />
-        <button>create</button>
-      </form>
+        <button className="create-port-button">create</button>
+        </form>
+        </div>
     )
   }
 }
