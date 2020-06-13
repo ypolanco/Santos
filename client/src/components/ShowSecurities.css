@@ -1,12 +1,10 @@
 .securities{
-  border: 2px solid red;
   display:flex; 
   flex-direction: column;
   color:white;
 }
 
 .securities-header{
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +13,6 @@
 .securities-display{
   display: flex;
  flex-direction: column;
-  border: 2px solid yellow;
 }
 
 .securities-button{
@@ -26,6 +23,7 @@
   color: white;
   border-radius: 10px;
   font-size: 17px;
+
 }
 
 .input-securities{
@@ -34,3 +32,16 @@
   height: 30px;
   border-radius: 8px;
 }
+
+.securities-display{
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.securities-display h4{
+margin: 2px;
+}
+
+.securities-display p{
+  margin: 2px;
+  }

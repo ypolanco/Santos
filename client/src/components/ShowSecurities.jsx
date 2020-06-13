@@ -60,6 +60,7 @@ export default function ShowSecurities(props) {
             <p>Current Price:{security.price}</p>
             <p>52 Week High: {security.ftWH}</p>
             <p>52 Week Low: {security.ftWH}</p>
+            
             {currentUser && currentUser.id === security.portfolio_id && (
               <>
                 <button>edit</button>
@@ -68,6 +69,7 @@ export default function ShowSecurities(props) {
                 </button>
               </>
               )}
+
               </div>
           </React.Fragment>
         ))}
