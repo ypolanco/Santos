@@ -20,7 +20,8 @@ export default class CreatePortfolio extends Component {
     return (
       <div className="create-form">
       <img src={logo} alt="Santos Logo" className="logo"/>
-      <form onSubmit={(e) => {
+        <form className="form"
+          onSubmit={(e) => {
         e.preventDefault();
         postPortfolio(this.state);
         history.push('/portfolios');
@@ -28,9 +29,10 @@ export default class CreatePortfolio extends Component {
           name: ""
         })
       }}>
-        <h3>Create Portfolio</h3>
-          <label htmlFor="name">Name</label>
-          <br/>
+        <h3 className="header">Create Portfolio</h3>
+          <label htmlFor="name" className="create-label">
+            Name
+            </label>
         <input
           id="id"
           type="text"
