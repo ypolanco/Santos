@@ -41,14 +41,15 @@ export default function ShowSecurities(props) {
       <div className="securities-header">
         <h3>Securities</h3>
         <form action="" onSubmit={handleSubmit}>
-          <input
+          <input className="input-securities"
             type="text"
             value={form.ticker}
+            placeholder="Ticker"
             onChange={(e) =>
               setForm({ ticker: e.target.value, portfolio_id: id })
             }
           />
-          <button type="submit">Submit</button>
+          <button type="submit" className="securities-button">Add</button>
         </form>
       </div>
       
