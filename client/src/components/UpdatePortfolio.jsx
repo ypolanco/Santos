@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./UpdatePortfolio.css"
+import logo from "./images/SantosLogo.png"
 
 export default class UpdatePortfolio extends Component {
   state = {
@@ -17,7 +19,6 @@ export default class UpdatePortfolio extends Component {
     }
   }
 
-
   setPortForm = () => {
     const { name } = this.props.portfolios;
     this.setState({ name });
@@ -34,24 +35,32 @@ export default class UpdatePortfolio extends Component {
     const { name } = this.state;
     const { putPortfolio, history, portfolios } = this.props;
     console.log(portfolios);
-    
+
     return (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          putPortfolio(portfolios.id, this.state);
-          // history.push("/portfolios");
-          // this.setState({
-          //   name: "",
-          // });
-        }}
-      >
-        <hr />
-        <h3>Update Portfolio</h3>
-        <label htmlFor="name">Name:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <button>Update</button>
-      </form>
+      <div className="edit-port">
+
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            putPortfolio(portfolios.id, this.state);
+            // history.push("/portfolios");
+            // this.setState({
+            //   name: "",
+            // });
+          }}
+        >
+          <hr />
+          <h3>Update Portfolio</h3>
+          <label htmlFor="name">Name:</label>
+          <input
+            id="id"
+            type="text"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <button>Update</button>
+        </form>
+      </div>
     );
   }
 }
