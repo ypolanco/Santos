@@ -47,22 +47,45 @@
   .portfolios a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 6px;
+    margin: 0 auto;
   }
   .port {
     display: flex;
-    /* border: 2px solid yellow; */
+    align-items: baseline;
+    border: 1px solid lightgrey;
     width: 300px;
     flex-grow: 1;
   }
 
   .port-name {
+    text-align: center;
+    width: 90px;
     font-size: 15px;
     margin: 0;
   }
   .port-name p {
     font-size: 15px;
     margin: 0;
+  }
+
+  .port-name:hover{
+    color:lime; 
+  }
+
+  .delete{
+    display:flex; 
+    justify-content: center;
+    color: white; 
+    background-color: #910E0E;
+    height: 22px;
+    width: 80px;
+    border-radius: 10px;
+  }
+
+  .delete:hover{
+    cursor: pointer;
+    zoom: 110%;
   }
 }
 @media only screen and (min-device-width: 834px) and (max-device-width: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {

@@ -26,10 +26,10 @@ export default function ShowPortfolios(props) {
               <p key={port.id} className="port-name">{port.name}</p>
             </Link>
             <Link to={`/portfolios/${port.id}/edit`} className="port-name">
-              <p>Edit Portfolio</p>
+              <p>Edit</p>
             </Link>
-            <button onClick={() => destroyPortfolio(port.id)}>
-              Delete Portfolio
+            <button onClick={() => destroyPortfolio(port.id)} className="delete">
+              Delete
             </button>
           </div>
         ))}
