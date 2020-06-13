@@ -1,0 +1,19 @@
+.securities{
+  border: 2px solid red;
+  display:flex; 
+  flex-direction: column;
+  color:white;
+}
+
+.securities-header{
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.securities-display{
+  display: flex;
+ flex-direction: column;
+  border: 2px solid yellow;
+}
