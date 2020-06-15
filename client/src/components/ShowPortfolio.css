@@ -68,6 +68,11 @@
     margin:0px;
   }
 
+  .port a:active{
+    color:lime; 
+    zoom:100%;
+  }
+
   .port-name {
     text-align: center;
     width: 90px;
@@ -82,6 +87,11 @@
   .port-name:hover{
     color:lime; 
     zoom:105%;
+  }
+
+  .port-name:active{
+    color:lime; 
+    zoom:100%;
   }
 
   .delete{

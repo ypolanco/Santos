@@ -37,7 +37,6 @@ export default function ShowSecurities(props) {
 
   return (
     <div className="securities">
-      <hr />
       <div className="securities-header">
         <h3>Securities</h3>
         <form action="" onSubmit={handleSubmit}>
