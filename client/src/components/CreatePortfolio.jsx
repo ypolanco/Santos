@@ -45,7 +45,7 @@ export default class CreatePortfolio extends Component {
             onChange={this.handleChange}
             className="input-create-port"
           />
-          <button className="create-port-button">create</button>
+          <button className="create-port-button">Create</button>
         </form>
       </div>
     );
