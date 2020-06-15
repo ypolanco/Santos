@@ -39,6 +39,11 @@
       background-color: #910e0e;
     }
 
+    .nav-logout:hover{
+      zoom: 105%;
+      cursor: pointer; 
+    }
+
    }
 
 @media only screen 

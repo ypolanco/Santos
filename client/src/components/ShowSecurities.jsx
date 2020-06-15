@@ -56,10 +56,12 @@ export default function ShowSecurities(props) {
         {securities.map((security) => (
           <React.Fragment key={security.id}>
             <div className="securities-display">
-            <h4>Ticker: {security.ticker}</h4>
-            <p>Current Price:{security.price}</p>
-            <p>52 Week High: {security.ftWH}</p>
-            <p>52 Week Low: {security.ftWH}</p>
+            <h4 key={security.ticker}>Ticker: {security.ticker}</h4>
+            <p key={security.price}>Current Price:{security.price}</p>
+            <p key={security.ftWH}>52 Week High: {security.ftWH}</p>
+            <p key={security.ftWL}>52 Week Low: {security.ftWH}</p>
+            <p key={security.purchase_price}>Purchase Price: {security.purchase_price}</p>
+              <p key={security.position_size}>Position Size: {security.position_size}</p>
             
             {currentUser && currentUser.id === security.portfolio_id && (
               <>
