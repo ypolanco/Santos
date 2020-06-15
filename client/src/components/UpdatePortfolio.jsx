@@ -50,15 +50,17 @@ export default class UpdatePortfolio extends Component {
           }}
         >
           <hr />
-          <h3>Update Portfolio</h3>
-          <label htmlFor="name">Name:</label>
-          <input
-            id="id"
+          <div className="main-edit">
+          <h3 className="edit-header">Update Portfolio</h3>
+            <label htmlFor="name" className="label-edit">Name</label>
+            <input
+            id="name"
             type="text"
             value={name}
             onChange={this.handleChange}
           />
-          <button>Update</button>
+            <button className="button-edit">Update</button>
+            </div>
         </form>
       </div>
     );

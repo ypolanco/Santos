@@ -9,7 +9,7 @@ export default function Header(props) {
       <NavLink to="/portfolios">
         <div className="logo-container">
           <img src={logo} alt="" className="nav-logo" />
-          <h1>Santos</h1>
+          <h1 className="app-name">Santos</h1>
         </div>
       </NavLink>
       {props.currentUser ? (
