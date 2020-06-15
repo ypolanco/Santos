@@ -17,19 +17,27 @@ User.destroy_all
 
 p "#{User.count} user(s) created"
 
-@port = Portfolio.create!(name: 'Port1', user: @user)
+@port1 = Portfolio.create!(name: 'Port1', user: @user)
 
-@yampi = Portfolio.create!(name: 'Yampi', user: @user)
+@port2 = Portfolio.create!(name: 'Port2', user: @user)
+
+@port3 = Portfolio.create!(name: 'Port3', user: @user)
 
 p @port
 
 p "#{Portfolio.count} porfolio(s) created"
 
-Security.create!(portfolio_id: @port.id, ticker: 'AAPL', price: 100, ftWH: 120, ftWL: 90, purchase_price: 98, position_size: 2)
+Security.create!(portfolio_id: @port1.id, ticker: 'AAPL', price: 100, ftWH: 120, ftWL: 90, purchase_price: 98, position_size: 2)
 
-Security.create!(portfolio_id: @port.id, ticker: 'TWTR', price: 100, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 24)
+Security.create!(portfolio_id: @port1.id, ticker: 'AAPL', price: 100, ftWH: 120, ftWL: 90, purchase_price: 98, position_size: 2)
 
-Security.create!(portfolio_id: @yampi.id, ticker: 'TSLA', price: 1000, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 1)
+Security.create!(portfolio_id: @port2.id, ticker: 'TWTR', price: 100, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 24)
+
+Security.create!(portfolio_id: @port2.id, ticker: 'TWTR', price: 100, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 24)
+
+Security.create!(portfolio_id: @port3.id, ticker: 'TSLA', price: 1000, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 1)
+
+Security.create!(portfolio_id: @port3.id, ticker: 'TSLA', price: 1000, ftWH: 120, ftWL: 90, purchase_price: 100, position_size: 1)
 
 # p @security.inspect
 # @security.save!
