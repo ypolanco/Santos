@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./UpdatePortfolio.css"
-import logo from "./images/SantosLogo.png"
+import "./UpdatePortfolio.css";
+import logo from "./images/SantosLogo.png";
 
 export default class UpdatePortfolio extends Component {
   state = {
@@ -18,6 +18,10 @@ export default class UpdatePortfolio extends Component {
       this.setPortForm();
     }
   }
+
+  // ===============================
+  // ========== Set Port =========
+  // ===============================
 
   setPortForm = () => {
     const { name } = this.props.portfolios;
@@ -37,7 +41,6 @@ export default class UpdatePortfolio extends Component {
 
     return (
       <div className="edit-port">
-
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -46,16 +49,18 @@ export default class UpdatePortfolio extends Component {
         >
           <hr />
           <div className="main-edit">
-          <h3 className="edit-header">Update Portfolio</h3>
-            <label htmlFor="name" className="label-edit">Name</label>
+            <h3 className="edit-header">Update Portfolio</h3>
+            <label htmlFor="name" className="label-edit">
+              Name
+            </label>
             <input
-            id="name"
-            type="text"
-            value={name}
-            onChange={this.handleChange}
-          />
+              id="name"
+              type="text"
+              value={name}
+              onChange={this.handleChange}
+            />
             <button className="button-edit">Update</button>
-            </div>
+          </div>
         </form>
       </div>
     );
