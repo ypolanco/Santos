@@ -71,8 +71,7 @@ export default function ShowSecurities(props) {
               </div>
           </React.Fragment>
         ))}
-      
-      {/*  */}
+  
       <br />
     </div>
   );
