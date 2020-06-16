@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 class SecuritiesController < ApplicationController
   before_action :set_security, only: %i[show update destroy]
