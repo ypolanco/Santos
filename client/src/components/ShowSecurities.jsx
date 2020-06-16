@@ -5,7 +5,6 @@ import "./ShowSecurities.css";
 export default function ShowSecurities(props) {
   const [id, setId] = useState(props.match.match.params.id);
   const [form, setForm] = useState({ ticker: "" });
-  console.log(props);
 
   const {
     securities,
@@ -15,8 +14,6 @@ export default function ShowSecurities(props) {
     portfolios,
     createSecurity,
   } = props;
-  console.log("securities", portfolios);
-  // console.log("Users", currentUser);
 
   useEffect(() => {
     getSecurities(props.match.match.params.id);

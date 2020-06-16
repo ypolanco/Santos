@@ -40,7 +40,6 @@ export default class Main extends Component {
 
   newPortfolio = async (portData) => {
     const newPortfolio = await createPortfolio(portData);
-    console.log(newPortfolio);
 
     this.setState((prevState) => ({
       portfolios: [...prevState.portfolios, newPortfolio],
@@ -56,9 +55,6 @@ export default class Main extends Component {
 
   putPortfolio = async (id, portData) => {
     const updatePort = await updatePortfolio(id, portData);
-    console.log(this.state);
-    console.log(updatePort);
-    console.log(id);
 
     this.setState((prevState) => ({
       portfolios: prevState.portfolios.map((port) =>
@@ -90,7 +86,6 @@ export default class Main extends Component {
 
   newSecurity = async (securityData) => {
     const newSecurity = await createSecurities(securityData);
-    console.log(newSecurity);
 
     this.setState((prevState) => ({
       securities: [...prevState.securities, newSecurity],
@@ -98,7 +93,6 @@ export default class Main extends Component {
   };
 
   render() {
-    console.log("securities", this.state.securities);
     return (
       <>
         <main>

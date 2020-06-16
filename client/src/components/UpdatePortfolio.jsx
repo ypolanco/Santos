@@ -34,7 +34,6 @@ export default class UpdatePortfolio extends Component {
   render() {
     const { name } = this.state;
     const { putPortfolio, history, portfolios } = this.props;
-    console.log(portfolios);
 
     return (
       <div className="edit-port">
@@ -43,10 +42,6 @@ export default class UpdatePortfolio extends Component {
           onSubmit={(e) => {
             e.preventDefault();
             putPortfolio(portfolios.id, this.state);
-            // history.push("/portfolios");
-            // this.setState({
-            //   name: "",
-            // });
           }}
         >
           <hr />

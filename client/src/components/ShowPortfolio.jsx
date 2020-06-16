@@ -5,9 +5,6 @@ import "./ShowPortfolio.css";
 export default function ShowPortfolios(props) {
   const { portfolios, destroyPortfolio } = props;
 
-  // console.log("hello", portfolios)
-  console.log("props", props);
-
   return (
 <>
     {props.currentUser ? (
