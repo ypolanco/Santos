@@ -30,8 +30,10 @@ export default class Main extends Component {
     this.getPortfolio();
     // this.getSecurities();
   }
-
+  
+// ===============================
   // ========== Portfolios =========
+  // ===============================
 
   getPortfolio = async () => {
     const portfolios = await getAllPortfolios();
