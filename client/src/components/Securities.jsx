@@ -11,6 +11,10 @@ export default class Securities extends Component {
     this.setPort()
   }
 
+  // ===============================
+  // ========== Sets Portfolios =========
+  // ===============================
+
   setPort = async () => {
     const port = await getOneSecurity(this.props.securityId);
     this.setState({ port })
