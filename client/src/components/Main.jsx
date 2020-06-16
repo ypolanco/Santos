@@ -30,7 +30,7 @@ export default class Main extends Component {
     this.getPortfolio();
     // this.getSecurities();
   }
-  
+
 // ===============================
   // ========== Portfolios =========
   // ===============================
@@ -65,7 +65,9 @@ export default class Main extends Component {
     }));
   };
 
-  // ========== Securities ===========
+ // ===============================
+  // ========== Securities =========
+  // ===============================
 
   getSecurities = async (id) => {
     const securities = await getAllSecurities(id);
