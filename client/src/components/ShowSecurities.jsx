@@ -15,6 +15,10 @@ export default function ShowSecurities(props) {
     createSecurity,
   } = props;
 
+  // ===============================
+  // ========== Multiple use Effect multiple Calls=========
+  // ===============================
+
   useEffect(() => {
     getSecurities(props.match.match.params.id);
   }, []);
@@ -37,7 +41,8 @@ export default function ShowSecurities(props) {
       <div className="securities-header">
         <h3>Securities</h3>
         <form action="" onSubmit={handleSubmit}>
-          <input className="input-securities"
+          <input
+            className="input-securities"
             type="text"
             value={form.ticker}
             placeholder="Ticker"
@@ -45,20 +50,26 @@ export default function ShowSecurities(props) {
               setForm({ ticker: e.target.value, portfolio_id: id })
             }
           />
-          <button type="submit" className="securities-button">Add</button>
+          <button type="submit" className="securities-button">
+            Add
+          </button>
         </form>
       </div>
-      
-        {securities.map((security) => (
-          <React.Fragment key={security.id}>
-            <div className="securities-display">
+
+      {securities.map((security) => (
+        <React.Fragment key={security.id}>
+          <div className="securities-display">
             <h4 key={security.ticker}>Ticker: {security.ticker}</h4>
             <p key={security.price}>Current Price:{security.price}</p>
             <p key={security.ftWH}>52 Week High: {security.ftWH}</p>
             <p key={security.ftWL}>52 Week Low: {security.ftWH}</p>
-            <p key={security.purchase_price}>Purchase Price: {security.purchase_price}</p>
-              <p key={security.position_size}>Position Size: {security.position_size}</p>
-            
+            <p key={security.purchase_price}>
+              Purchase Price: {security.purchase_price}
+            </p>
+            <p key={security.position_size}>
+              Position Size: {security.position_size}
+            </p>
+
             {currentUser && currentUser.id === security.portfolio_id && (
               <>
                 <button>edit</button>
@@ -66,12 +77,11 @@ export default function ShowSecurities(props) {
                   delete
                 </button>
               </>
-              )}
+            )}
+          </div>
+        </React.Fragment>
+      ))}
 
-              </div>
-          </React.Fragment>
-        ))}
-  
       <br />
     </div>
   );
