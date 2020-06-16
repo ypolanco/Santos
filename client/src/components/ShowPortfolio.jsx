@@ -23,7 +23,6 @@ export default function ShowPortfolios(props) {
           <div className="port">
             <Link to={`/portfolios/${port.id}/securities`} key={port.name}>
               <p key={port.id} className="port-name">{port.name}</p>
-              {/* <p key={port.id} className="port-name">{port.created_at}</p> */}
             </Link>
             <Link to={`/portfolios/${port.id}/edit`} className="port-name">
               <p>Edit</p>
