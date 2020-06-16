@@ -3,7 +3,6 @@ Portfolio.destroy_all
 Security.destroy_all
 User.destroy_all
 
-# puts "hello"
 @user = User.create!({ username: 'jp', email: 'yampi@email.com', password: '123456' })
 
 p "#{User.count} user(s) created"
