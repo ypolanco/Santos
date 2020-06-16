@@ -10,6 +10,8 @@ export default class CreateSecurity extends Component {
     position_size: 0,
   };
 
+  // handle change found across the board
+
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
